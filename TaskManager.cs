@@ -1,4 +1,7 @@
-﻿namespace ToDoReminder;
+﻿using ToDoReminder.Models;
+using Task = ToDoReminder.Models.Task;
+
+namespace ToDoReminder;
 
 public class TaskManager
 {
@@ -27,5 +30,18 @@ public class TaskManager
     public List<string> GetTasksAsString()
     {
         return taskList.Select(t => t.ToString()).ToList();
+    }
+
+    // File operations
+    public bool WriteDataToFile(string fileName)
+    {
+        FileManager fileManager = new FileManager();
+        return fileManager.SaveTaskListToFile(taskList, fileName);
+    }
+
+    public bool ReadDataFromFile(string fileName)
+    {
+        FileManager fileManager = new FileManager();
+        return fileManager.ReadTaskListFromFile(taskList, fileName);
     }
 }

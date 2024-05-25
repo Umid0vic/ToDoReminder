@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             MenuMain = new MenuStrip();
             menuFile = new ToolStripMenuItem();
             menuFileNew = new ToolStripMenuItem();
@@ -38,6 +39,21 @@
             menuFileExit = new ToolStripMenuItem();
             menuHelp = new ToolStripMenuItem();
             menuHelpAbout = new ToolStripMenuItem();
+            labelDateTime = new Label();
+            dateTimePicker = new DateTimePicker();
+            lblPriority = new Label();
+            cmbPriority = new ComboBox();
+            lblToDo = new Label();
+            txtDescription = new TextBox();
+            btnAdd = new Button();
+            listViewTasks = new ListView();
+            columnDate = new ColumnHeader();
+            columnTime = new ColumnHeader();
+            columnPriority = new ColumnHeader();
+            ColumnDescription = new ColumnHeader();
+            btnDelete = new Button();
+            btnChange = new Button();
+            toolTipDateTimePicker = new ToolTip(components);
             MenuMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -104,15 +120,131 @@
             menuHelpAbout.Size = new Size(107, 22);
             menuHelpAbout.Text = "About";
             // 
+            // labelDateTime
+            // 
+            labelDateTime.AutoSize = true;
+            labelDateTime.Location = new Point(10, 30);
+            labelDateTime.Name = "labelDateTime";
+            labelDateTime.Size = new Size(83, 15);
+            labelDateTime.TabIndex = 1;
+            labelDateTime.Text = "Date and Time";
+            // 
+            // dateTimePicker
+            // 
+            dateTimePicker.Location = new Point(99, 24);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(200, 23);
+            dateTimePicker.TabIndex = 2;
+            // 
+            // lblPriority
+            // 
+            lblPriority.AutoSize = true;
+            lblPriority.Location = new Point(343, 30);
+            lblPriority.Name = "lblPriority";
+            lblPriority.Size = new Size(45, 15);
+            lblPriority.TabIndex = 3;
+            lblPriority.Text = "Priority";
+            // 
+            // cmbPriority
+            // 
+            cmbPriority.FormattingEnabled = true;
+            cmbPriority.Location = new Point(394, 24);
+            cmbPriority.Name = "cmbPriority";
+            cmbPriority.Size = new Size(121, 23);
+            cmbPriority.TabIndex = 4;
+            // 
+            // lblToDo
+            // 
+            lblToDo.AutoSize = true;
+            lblToDo.Location = new Point(10, 67);
+            lblToDo.Name = "lblToDo";
+            lblToDo.Size = new Size(36, 15);
+            lblToDo.TabIndex = 5;
+            lblToDo.Text = "To do";
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(99, 63);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(593, 23);
+            txtDescription.TabIndex = 6;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = SystemColors.GradientActiveCaption;
+            btnAdd.BackgroundImageLayout = ImageLayout.None;
+            btnAdd.Location = new Point(698, 58);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(90, 32);
+            btnAdd.TabIndex = 7;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // listViewTasks
+            // 
+            listViewTasks.Columns.AddRange(new ColumnHeader[] { columnDate, columnTime, columnPriority, ColumnDescription });
+            listViewTasks.Location = new Point(12, 102);
+            listViewTasks.Name = "listViewTasks";
+            listViewTasks.Size = new Size(776, 282);
+            listViewTasks.TabIndex = 8;
+            listViewTasks.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnDate
+            // 
+            columnDate.Text = "Date";
+            // 
+            // columnTime
+            // 
+            columnTime.Text = "Hour";
+            // 
+            // columnPriority
+            // 
+            columnPriority.Text = "Priority";
+            // 
+            // ColumnDescription
+            // 
+            ColumnDescription.Text = "Description";
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.RosyBrown;
+            btnDelete.ForeColor = SystemColors.ButtonHighlight;
+            btnDelete.Location = new Point(394, 390);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(99, 31);
+            btnDelete.TabIndex = 9;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnChange
+            // 
+            btnChange.BackColor = SystemColors.Info;
+            btnChange.Location = new Point(244, 390);
+            btnChange.Name = "btnChange";
+            btnChange.Size = new Size(102, 31);
+            btnChange.TabIndex = 10;
+            btnChange.Text = "Change";
+            btnChange.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnChange);
+            Controls.Add(btnDelete);
+            Controls.Add(listViewTasks);
+            Controls.Add(btnAdd);
+            Controls.Add(txtDescription);
+            Controls.Add(lblToDo);
+            Controls.Add(cmbPriority);
+            Controls.Add(lblPriority);
+            Controls.Add(dateTimePicker);
+            Controls.Add(labelDateTime);
             Controls.Add(MenuMain);
             MainMenuStrip = MenuMain;
             Name = "MainForm";
-            Text = "ToDo Reminder by Osman";
+            Text = "s";
             MenuMain.ResumeLayout(false);
             MenuMain.PerformLayout();
             ResumeLayout(false);
@@ -131,5 +263,20 @@
         private ToolStripMenuItem menuFileExit;
         private ToolStripMenuItem menuHelp;
         private ToolStripMenuItem menuHelpAbout;
+        private Label labelDateTime;
+        private DateTimePicker dateTimePicker;
+        private Label lblPriority;
+        private ComboBox cmbPriority;
+        private Label lblToDo;
+        private TextBox txtDescription;
+        private Button btnAdd;
+        private ListView listViewTasks;
+        private ColumnHeader columnDate;
+        private ColumnHeader columnTime;
+        private ColumnHeader columnPriority;
+        private ColumnHeader ColumnDescription;
+        private Button btnDelete;
+        private Button btnChange;
+        private ToolTip toolTipDateTimePicker;
     }
 }

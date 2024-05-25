@@ -1,12 +1,29 @@
-﻿using System.IO;
+﻿// Osman Said 25/05/2024
+
 using ToDoReminder.Models;
 using Task = ToDoReminder.Models.Task;
 
+/// <summary>
+/// Manages file operations for saving and reading tasks.
+/// </summary>
 public class FileManager
 {
+    /// <summary>
+    /// The file version token.
+    /// </summary>
     private const string fileVersionToken = "ToDoRem_21";
+
+    /// <summary>
+    /// The file version number.
+    /// </summary>
     private const double fileVersionNr = 1.0;
 
+    /// <summary>
+    /// Saves the task list to a file.
+    /// </summary>
+    /// <param name="taskList">The list of tasks to save.</param>
+    /// <param name="fileName">The name of the file.</param>
+    /// <returns><c>true</c> if the operation was successful; otherwise, <c>false</c>.</returns>
     public bool SaveTaskListToFile(List<Task> taskList, string fileName)
     {
         bool ok = true;
@@ -43,6 +60,12 @@ public class FileManager
         return ok;
     }
 
+    /// <summary>
+    /// Reads the task list from a file.
+    /// </summary>
+    /// <param name="taskList">The list to populate with tasks.</param>
+    /// <param name="fileName">The name of the file.</param>
+    /// <returns><c>true</c> if the operation was successful; otherwise, <c>false</c>.</returns>
     public bool ReadTaskListFromFile(List<Task> taskList, string fileName)
     {
         bool ok = true;

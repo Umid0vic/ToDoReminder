@@ -171,8 +171,8 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = SystemColors.GradientActiveCaption;
-            btnAdd.BackgroundImageLayout = ImageLayout.None;
+            btnAdd.BackColor = Color.LightGreen;
+            btnAdd.ForeColor = Color.Black;
             btnAdd.Location = new Point(698, 58);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(90, 32);
@@ -192,6 +192,7 @@
             // columnDate
             // 
             columnDate.Text = "Date";
+            columnDate.Width = 100;
             // 
             // columnTime
             // 
@@ -200,15 +201,17 @@
             // columnPriority
             // 
             columnPriority.Text = "Priority";
+            columnPriority.Width = 120;
             // 
             // ColumnDescription
             // 
             ColumnDescription.Text = "Description";
+            ColumnDescription.Width = 496;
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.RosyBrown;
-            btnDelete.ForeColor = SystemColors.ButtonHighlight;
+            btnDelete.BackColor = Color.LightCoral;
+            btnDelete.ForeColor = Color.Black;
             btnDelete.Location = new Point(394, 390);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(99, 31);
@@ -218,7 +221,8 @@
             // 
             // btnChange
             // 
-            btnChange.BackColor = SystemColors.Info;
+            btnChange.BackColor = Color.LightGoldenrodYellow;
+            btnChange.ForeColor = Color.Black;
             btnChange.Location = new Point(244, 390);
             btnChange.Name = "btnChange";
             btnChange.Size = new Size(102, 31);
